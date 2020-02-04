@@ -1,0 +1,35 @@
+<list>
+  <data.Words>
+    <indices>
+      <string>James</string>
+      <string>23</string>
+      <string>45</string>
+    </indices>
+    <text>This is a test</text>
+    <version>KJV</version>
+    <bestAccuracy>0</bestAccuracy>
+    <dateIncrement>1</dateIncrement>
+  </data.Words>
+  <data.Words>
+    <indices>
+      <string>John</string>
+      <string>67</string>
+      <string>89</string>
+    </indices>
+    <text>This is a test too</text>
+    <version>KJV</version>
+    <bestAccuracy>0</bestAccuracy>
+    <dateIncrement>1</dateIncrement>
+  </data.Words>
+  <data.Words>
+    <indices>
+      <string>Jones</string>
+      <string>12</string>
+      <string>34</string>
+    </indices>
+    <text>This is also a test</text>
+    <version>KJV</version>
+    <bestAccuracy>0</bestAccuracy>
+    <dateIncrement>1</dateIncrement>
+  </data.Words>
+</list>

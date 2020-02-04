@@ -1,0 +1,11 @@
+<data.Words>
+  <indices>
+    <string>James</string>
+    <string>23</string>
+    <string>45</string>
+  </indices>
+  <text>This is a test</text>
+  <version>KJV</version>
+  <bestAccuracy>0</bestAccuracy>
+  <dateIncrement>1</dateIncrement>
+</data.Words>
