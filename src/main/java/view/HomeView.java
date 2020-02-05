@@ -379,6 +379,19 @@ public class HomeView extends javax.swing.JFrame {
     }
     
     /**
+     * Remove a Words object from the library
+     * @param curWords Words object to remove from the library
+     */
+    public void removeText(Words curWords){
+        //Remove the Words object
+        manager.getLibrary().remove(curWords);
+        //Refresh due list just in case
+        getToReview();
+        //Rebuild indices
+        manager.buildIndices();
+    }
+    
+    /**
      * Close the panel and returns to the text browser
      * Each panel is new so close completely and return to browser.
      * @param closePanel panel to close

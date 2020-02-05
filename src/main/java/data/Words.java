@@ -230,5 +230,11 @@ public class Words {
             dateIncrement = dateIncrement * 
                     controller.ReviewManager.INCREMENTMULTI;
         }
+        //If accuracy isn't met, decrease increment by one day
+        else{
+            if(dateIncrement > 1){
+                dateIncrement--;
+            }
+        }
     }
 }
