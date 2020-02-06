@@ -7,6 +7,7 @@ package view;
 
 import controller.ReviewManager;
 import data.Words;
+import data.Options;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -112,7 +113,7 @@ public class ReviewPanel extends javax.swing.JPanel {
             }
         });
 
-        skipButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        skipButton.setFont(Options.getInstance().getButtonFont());
         skipButton.setText("Skip");
         skipButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,19 +121,19 @@ public class ReviewPanel extends javax.swing.JPanel {
             }
         });
 
-        indicesLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        indicesLabel.setFont(Options.getInstance().getHeaderFont());
         indicesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         indicesLabel.setText("Indices");
 
-        reviewProgress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        reviewProgress.setFont(Options.getInstance().getButtonFont());
         reviewProgress.setForeground(new java.awt.Color(0, 0, 0));
         reviewProgress.setStringPainted(true);
 
-        errorLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        errorLabel.setFont(Options.getInstance().getHeaderFont());
         errorLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         errorLabel.setText("Accuracy:");
 
-        percentLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        percentLabel.setFont(Options.getInstance().getHeaderFont());
         percentLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         percentLabel.setText("100%");
 
@@ -140,10 +141,10 @@ public class ReviewPanel extends javax.swing.JPanel {
         scrollPane.setAutoscrolls(true);
 
         textPane.setBackground(new java.awt.Color(250, 250, 250));
-        textPane.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        textPane.setFont(Options.getInstance().getParagraphFont());
         scrollPane.setViewportView(textPane);
 
-        nextReviewLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        nextReviewLabel.setFont(Options.getInstance().getHeaderFont());
         nextReviewLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nextReviewLabel.setText("Next review due:");
 
@@ -181,7 +182,7 @@ public class ReviewPanel extends javax.swing.JPanel {
                         .addComponent(errorLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(percentLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
                         .addComponent(nextReviewLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nextDateLabel))

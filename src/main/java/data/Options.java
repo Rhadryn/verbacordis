@@ -4,6 +4,7 @@
 package data;
 
 import java.util.ArrayList;
+import java.awt.Font;
 
 /**
  *
@@ -22,8 +23,19 @@ public class Options {
     int correctionDelay;
     /**Multiplier of the date increment when the text is successfully reviewed*/
     float incrementMulti;
+    /**Default paragraph font*/
+    Font paragraphFont;
+    /**Default button font*/
+    Font buttonFont;
+    /**Default header font*/
+    Font headerFont;
     
-    private Options(){}
+    private Options(){
+        //Set default font styles
+        paragraphFont = new java.awt.Font("Tahoma", 0, 14);
+        buttonFont = new java.awt.Font("Tahoma", 1, 14);
+        headerFont = new java.awt.Font("Tahoma", 1, 18);
+    }
     
     public static Options getInstance(){
         return instance;
@@ -66,4 +78,22 @@ public class Options {
     public void setCorrectionDelay(int correctionDelay) {
         this.correctionDelay = correctionDelay;
     }
+
+    public float getIncrementMulti() {
+        return incrementMulti;
+    }
+
+    public Font getParagraphFont() {
+        return paragraphFont;
+    }
+
+    public Font getButtonFont() {
+        return buttonFont;
+    }
+
+    public Font getHeaderFont() {
+        return headerFont;
+    }
+    
+    
 }

@@ -6,6 +6,7 @@
 package view;
 
 import javax.swing.DefaultListModel;
+import data.Options;
 
 /**
  *
@@ -54,7 +55,7 @@ public class DuePanel extends javax.swing.JPanel {
 
         reviewList.setBackground(new java.awt.Color(250, 250, 250));
         reviewList.setBorder(new javax.swing.border.MatteBorder(null));
-        reviewList.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        reviewList.setFont(Options.getInstance().getParagraphFont());
         reviewList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
                 reviewListValueChanged(evt);
@@ -62,7 +63,7 @@ public class DuePanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(reviewList);
 
-        reviewSelectButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        reviewSelectButton.setFont(Options.getInstance().getButtonFont());
         reviewSelectButton.setEnabled(false);
         reviewSelectButton.setLabel("Review Selected");
         reviewSelectButton.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +72,7 @@ public class DuePanel extends javax.swing.JPanel {
             }
         });
 
-        reviewAllButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        reviewAllButton.setFont(Options.getInstance().getButtonFont());
         reviewAllButton.setEnabled(false);
         reviewAllButton.setLabel("Review All");
         reviewAllButton.addActionListener(new java.awt.event.ActionListener() {

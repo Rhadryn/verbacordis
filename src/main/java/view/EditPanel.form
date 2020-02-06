@@ -79,7 +79,7 @@
                   <Component id="textLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="29" max="32767" attributes="0"/>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="firstReviewLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="dateResetButton" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
@@ -97,8 +97,8 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="versionLabel">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="Options.getInstance().getParagraphFont()" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Version:"/>
       </Properties>
@@ -108,8 +108,8 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="fa" green="fa" red="fa" type="rgb"/>
         </Property>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="Options.getInstance().getParagraphFont()" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -118,8 +118,8 @@
     </Component>
     <Component class="javax.swing.JButton" name="cancelButton">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="1"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="Options.getInstance().getButtonFont()" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancel"/>
       </Properties>
@@ -129,8 +129,8 @@
     </Component>
     <Component class="javax.swing.JButton" name="saveButton">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="1"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="Options.getInstance().getButtonFont()" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Save"/>
         <Property name="enabled" type="boolean" value="false"/>
@@ -141,8 +141,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="referenceLabel">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="Options.getInstance().getParagraphFont()" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Reference:"/>
       </Properties>
@@ -152,8 +152,8 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="fa" green="fa" red="fa" type="rgb"/>
         </Property>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="Options.getInstance().getParagraphFont()" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -162,16 +162,16 @@
     </Component>
     <Component class="javax.swing.JLabel" name="firstReviewLabel">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="Options.getInstance().getParagraphFont()" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" value="First review date:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="dateResetButton">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="Options.getInstance().getButtonFont()" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Reset"/>
       </Properties>
@@ -181,8 +181,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="textLabel">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="14" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="Options.getInstance().getParagraphFont()" type="code"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Text:"/>
       </Properties>
@@ -200,8 +200,8 @@
               <Color blue="fa" green="fa" red="fa" type="rgb"/>
             </Property>
             <Property name="columns" type="int" value="20"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="0"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="Options.getInstance().getParagraphFont()" type="code"/>
             </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>

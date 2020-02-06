@@ -7,6 +7,7 @@ package view;
 
 import data.Words;
 import javax.swing.JOptionPane;
+import data.Options;
 
 /**
  *
@@ -54,18 +55,18 @@ public class EditPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(210, 255, 210));
         setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        versionLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        versionLabel.setFont(Options.getInstance().getParagraphFont());
         versionLabel.setText("Version:");
 
         versionText.setBackground(new java.awt.Color(250, 250, 250));
-        versionText.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        versionText.setFont(Options.getInstance().getParagraphFont());
         versionText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 versionTextKeyTyped(evt);
             }
         });
 
-        cancelButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cancelButton.setFont(Options.getInstance().getButtonFont());
         cancelButton.setText("Cancel");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,7 +74,7 @@ public class EditPanel extends javax.swing.JPanel {
             }
         });
 
-        saveButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        saveButton.setFont(Options.getInstance().getButtonFont());
         saveButton.setText("Save");
         saveButton.setEnabled(false);
         saveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -82,21 +83,21 @@ public class EditPanel extends javax.swing.JPanel {
             }
         });
 
-        referenceLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        referenceLabel.setFont(Options.getInstance().getParagraphFont());
         referenceLabel.setText("Reference:");
 
         referenceText.setBackground(new java.awt.Color(250, 250, 250));
-        referenceText.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        referenceText.setFont(Options.getInstance().getParagraphFont());
         referenceText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 referenceTextKeyTyped(evt);
             }
         });
 
-        firstReviewLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        firstReviewLabel.setFont(Options.getInstance().getParagraphFont());
         firstReviewLabel.setText("First review date:");
 
-        dateResetButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        dateResetButton.setFont(Options.getInstance().getButtonFont());
         dateResetButton.setText("Reset");
         dateResetButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,12 +105,12 @@ public class EditPanel extends javax.swing.JPanel {
             }
         });
 
-        textLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        textLabel.setFont(Options.getInstance().getParagraphFont());
         textLabel.setText("Text:");
 
         textArea.setBackground(new java.awt.Color(250, 250, 250));
         textArea.setColumns(20);
-        textArea.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        textArea.setFont(Options.getInstance().getParagraphFont());
         textArea.setLineWrap(true);
         textArea.setRows(5);
         textArea.setWrapStyleWord(true);
@@ -165,7 +166,7 @@ public class EditPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(textLabel)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstReviewLabel)
                     .addComponent(dateResetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))

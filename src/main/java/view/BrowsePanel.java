@@ -6,6 +6,7 @@
 package view;
 
 import data.Index;
+import data.Options;
 import data.Words;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
@@ -105,6 +106,7 @@ public class BrowsePanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(210, 255, 210));
 
         reviewList.setBackground(new java.awt.Color(250, 250, 250));
+        reviewList.setFont(Options.getInstance().getParagraphFont());
         reviewList.setModel(listModel);
         reviewList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -113,7 +115,7 @@ public class BrowsePanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(reviewList);
 
-        reviewButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        reviewButton.setFont(Options.getInstance().getButtonFont());
         reviewButton.setText("Start Review");
         reviewButton.setEnabled(false);
         reviewButton.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +124,7 @@ public class BrowsePanel extends javax.swing.JPanel {
             }
         });
 
-        addButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        addButton.setFont(Options.getInstance().getButtonFont());
         addButton.setText("Add for Review-->");
         addButton.setEnabled(false);
         addButton.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +133,7 @@ public class BrowsePanel extends javax.swing.JPanel {
             }
         });
 
-        viewButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        viewButton.setFont(Options.getInstance().getButtonFont());
         viewButton.setText("View text");
         viewButton.setEnabled(false);
         viewButton.addActionListener(new java.awt.event.ActionListener() {
@@ -141,12 +143,12 @@ public class BrowsePanel extends javax.swing.JPanel {
         });
 
         indexTree.setBackground(new java.awt.Color(250, 250, 250));
-        indexTree.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        indexTree.setFont(Options.getInstance().getParagraphFont());
         indexTree.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         indexTree.setRootVisible(false);
         jScrollPane3.setViewportView(indexTree);
 
-        removeButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        removeButton.setFont(Options.getInstance().getButtonFont());
         removeButton.setEnabled(false);
         removeButton.setLabel("<--Remove from Review");
         removeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +157,7 @@ public class BrowsePanel extends javax.swing.JPanel {
             }
         });
 
-        importButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        importButton.setFont(Options.getInstance().getButtonFont());
         importButton.setLabel("Import Text");
         importButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +165,7 @@ public class BrowsePanel extends javax.swing.JPanel {
             }
         });
 
-        newButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        newButton.setFont(Options.getInstance().getButtonFont());
         newButton.setLabel("Add New Text");
         newButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +173,7 @@ public class BrowsePanel extends javax.swing.JPanel {
             }
         });
 
-        deleteButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        deleteButton.setFont(Options.getInstance().getButtonFont());
         deleteButton.setText("Delete Text");
         deleteButton.setEnabled(false);
         deleteButton.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +188,7 @@ public class BrowsePanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(importButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -197,7 +199,7 @@ public class BrowsePanel extends javax.swing.JPanel {
                     .addComponent(deleteButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(reviewButton, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                    .addComponent(reviewButton, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );

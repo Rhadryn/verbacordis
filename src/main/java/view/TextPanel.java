@@ -5,6 +5,7 @@
  */
 package view;
 
+import data.Options;
 import data.Words;
 
 /**
@@ -42,7 +43,7 @@ public class TextPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(210, 255, 210));
 
-        editButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        editButton.setFont(Options.getInstance().getButtonFont());
         editButton.setText("Edit");
         editButton.setName(""); // NOI18N
         editButton.addActionListener(new java.awt.event.ActionListener() {
@@ -54,13 +55,13 @@ public class TextPanel extends javax.swing.JPanel {
         textArea.setEditable(false);
         textArea.setBackground(new java.awt.Color(250, 250, 250));
         textArea.setColumns(20);
-        textArea.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        textArea.setFont(Options.getInstance().getParagraphFont());
         textArea.setLineWrap(true);
         textArea.setRows(5);
         textArea.setWrapStyleWord(true);
         jScrollPane1.setViewportView(textArea);
 
-        closeButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        closeButton.setFont(Options.getInstance().getButtonFont());
         closeButton.setText("Close");
         closeButton.setName(""); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +70,7 @@ public class TextPanel extends javax.swing.JPanel {
             }
         });
 
-        indicesLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        indicesLabel.setFont(Options.getInstance().getParagraphFont());
         indicesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         indicesLabel.setText("Indices");
 
