@@ -238,6 +238,8 @@ public class EditPanel extends javax.swing.JPanel {
             curWords.setLastDate(null);
             curWords.setNextDate(null);
             curWords.setDateIncrement(1);
+            loadData();
+            saveButton.setEnabled(true);
         }
     }//GEN-LAST:event_dateResetButtonActionPerformed
 

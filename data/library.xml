@@ -50,18 +50,6 @@
   <data.Words>
     <indices>
       <string>Titus</string>
-      <string>2</string>
-      <string>7</string>
-    </indices>
-    <text>This is the seventh verse of the second chapter.</text>
-    <version>KJV</version>
-    <bestAccuracy>0</bestAccuracy>
-    <repetitions>0</repetitions>
-    <dateIncrement>1</dateIncrement>
-  </data.Words>
-  <data.Words>
-    <indices>
-      <string>Titus</string>
       <string>3</string>
       <string>1</string>
     </indices>
@@ -120,9 +108,6 @@
     <version>KJV</version>
     <bestAccuracy>100</bestAccuracy>
     <repetitions>5</repetitions>
-    <startDate>2020-02-02 04:58:59.440 UTC</startDate>
-    <dateIncrement>0</dateIncrement>
-    <lastDate>2020-02-04 09:53:08.234 UTC</lastDate>
-    <nextDate>2020-02-04 09:53:08.234 UTC</nextDate>
+    <dateIncrement>1</dateIncrement>
   </data.Words>
 </list>

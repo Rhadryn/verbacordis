@@ -385,10 +385,12 @@ public class HomeView extends javax.swing.JFrame {
     public void removeText(Words curWords){
         //Remove the Words object
         manager.getLibrary().remove(curWords);
-        //Refresh due list just in case
+        //Refresh due list just in case the removed object was on it
         getToReview();
         //Rebuild indices
         manager.buildIndices();
+        browser.refreshLibrary(manager.getIndices());
+        duePanel.refreshList();
     }
     
     /**

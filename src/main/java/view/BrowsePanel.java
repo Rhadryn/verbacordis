@@ -287,9 +287,10 @@ public class BrowsePanel extends javax.swing.JPanel {
         int dialogResult = JOptionPane.showConfirmDialog (null,
             "Are you sure you want to delete this text?", "Warning",
             JOptionPane.YES_NO_OPTION);
-        if(dialogResult == JOptionPane.YES_OPTION){
-            //remove text
-            //use reference to get Words object, then pass to home.removeWords()
+        if(dialogResult == JOptionPane.YES_OPTION){                                          
+            ArrayList<Words> selected = 
+                home.getTextFromRef(indexTree.getSelectionPath());
+            home.removeText(selected.get(0));
         }
     }//GEN-LAST:event_deleteButtonActionPerformed
 

@@ -106,6 +106,7 @@ public class ReviewManager {
      * TODO: Test cases(!)
      */
     public void buildIndices(){
+        indices = new ArrayList<>();
         //For each word in the library, get the indices
         for(Iterator<Words> it = library.iterator(); it.hasNext();){
             ArrayList<String> newIndices = it.next().getIndices();

@@ -32,7 +32,7 @@ public class Options {
     
     private Options(){
         //Set default font styles
-        paragraphFont = new java.awt.Font("Tahoma", 0, 14);
+        paragraphFont = new java.awt.Font("Tahoma", 0, 16);
         buttonFont = new java.awt.Font("Tahoma", 1, 14);
         headerFont = new java.awt.Font("Tahoma", 1, 18);
     }
