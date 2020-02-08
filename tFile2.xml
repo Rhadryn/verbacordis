@@ -8,6 +8,7 @@
     <text>This is a test</text>
     <version>KJV</version>
     <bestAccuracy>0</bestAccuracy>
+    <repetitions>0</repetitions>
     <dateIncrement>1</dateIncrement>
   </data.Words>
   <data.Words>
@@ -19,6 +20,7 @@
     <text>This is a test too</text>
     <version>KJV</version>
     <bestAccuracy>0</bestAccuracy>
+    <repetitions>0</repetitions>
     <dateIncrement>1</dateIncrement>
   </data.Words>
   <data.Words>
@@ -30,6 +32,7 @@
     <text>This is also a test</text>
     <version>KJV</version>
     <bestAccuracy>0</bestAccuracy>
+    <repetitions>0</repetitions>
     <dateIncrement>1</dateIncrement>
   </data.Words>
 </list>

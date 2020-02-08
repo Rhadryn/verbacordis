@@ -10,12 +10,14 @@ package view;
  * @author Rhadryn
  */
 public class SettingsPanel extends javax.swing.JPanel {
+    HomeView home;
 
     /**
      * Creates new form SettingsPanel
      */
-    public SettingsPanel() {
+    public SettingsPanel(HomeView home) {
         initComponents();
+        this.home = home;
     }
 
     /**
@@ -27,6 +29,7 @@ public class SettingsPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        quoteCheck2 = new javax.swing.JCheckBox();
         jPanel1 = new javax.swing.JPanel();
         correctLabel = new javax.swing.JLabel();
         commaCheck = new javax.swing.JCheckBox();
@@ -35,10 +38,22 @@ public class SettingsPanel extends javax.swing.JPanel {
         capitalCheck = new javax.swing.JCheckBox();
         spacesCheck = new javax.swing.JCheckBox();
         quoteCheck = new javax.swing.JCheckBox();
+        questionCheck = new javax.swing.JCheckBox();
+        exclamationCheck = new javax.swing.JCheckBox();
+        colonCheck = new javax.swing.JCheckBox();
         delayLabel = new javax.swing.JLabel();
         accuracyLabel = new javax.swing.JLabel();
         secondsLabel = new javax.swing.JLabel();
         secondsSpinner = new javax.swing.JSpinner();
+        accuracySpinner = new javax.swing.JSpinner();
+        percentLabel = new javax.swing.JLabel();
+        settingsLabel = new javax.swing.JLabel();
+        saveButton = new javax.swing.JButton();
+        cancelButton = new javax.swing.JButton();
+
+        quoteCheck2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        quoteCheck2.setText(" Quotation mark");
+        quoteCheck2.setToolTipText("");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -65,6 +80,18 @@ public class SettingsPanel extends javax.swing.JPanel {
         quoteCheck.setText(" Quotation mark");
         quoteCheck.setToolTipText("");
 
+        questionCheck.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        questionCheck.setText(" Question mark");
+        questionCheck.setToolTipText("");
+
+        exclamationCheck.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        exclamationCheck.setText(" Exclamation point");
+        exclamationCheck.setToolTipText("");
+
+        colonCheck.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        colonCheck.setText(" Colon");
+        colonCheck.setToolTipText("");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -81,29 +108,38 @@ public class SettingsPanel extends javax.swing.JPanel {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(colonCheck)
                             .addComponent(capitalCheck)
                             .addComponent(spacesCheck)
-                            .addComponent(quoteCheck))
-                        .addGap(0, 11, Short.MAX_VALUE))))
+                            .addComponent(quoteCheck)
+                            .addComponent(exclamationCheck)
+                            .addComponent(questionCheck))
+                        .addGap(0, 18, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(correctLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(commaCheck)
+                .addGap(7, 7, 7)
+                .addComponent(capitalCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(semicolonCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(periodCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(capitalCheck)
+                .addComponent(commaCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(spacesCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(quoteCheck)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(colonCheck)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(questionCheck)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(exclamationCheck)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         delayLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -120,55 +156,103 @@ public class SettingsPanel extends javax.swing.JPanel {
         secondsSpinner.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         secondsSpinner.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(1.0f), Float.valueOf(0.0f), Float.valueOf(5.0f), Float.valueOf(0.1f)));
 
+        accuracySpinner.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        accuracySpinner.setModel(new javax.swing.SpinnerNumberModel(90, 0, 100, 1));
+
+        percentLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        percentLabel.setText("%");
+
+        settingsLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        settingsLabel.setText("Settings");
+
+        saveButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        saveButton.setText("Save");
+
+        cancelButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cancelButton.setText("Cancel");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(settingsLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(delayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(accuracyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(accuracySpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(percentLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(secondsSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(secondsLabel)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(delayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(accuracyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(secondsSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(secondsLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(79, Short.MAX_VALUE))
+                        .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(133, 133, 133)
+                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(75, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(delayLabel)
-                    .addComponent(secondsLabel)
-                    .addComponent(secondsSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(accuracyLabel)
-                .addGap(219, 219, 219))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(settingsLabel)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(delayLabel)
+                            .addComponent(secondsLabel)
+                            .addComponent(secondsSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(accuracyLabel)
+                            .addComponent(accuracySpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(percentLabel)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel accuracyLabel;
+    private javax.swing.JSpinner accuracySpinner;
+    private javax.swing.JButton cancelButton;
     private javax.swing.JCheckBox capitalCheck;
+    private javax.swing.JCheckBox colonCheck;
     private javax.swing.JCheckBox commaCheck;
     private javax.swing.JLabel correctLabel;
     private javax.swing.JLabel delayLabel;
+    private javax.swing.JCheckBox exclamationCheck;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel percentLabel;
     private javax.swing.JCheckBox periodCheck;
+    private javax.swing.JCheckBox questionCheck;
     private javax.swing.JCheckBox quoteCheck;
+    private javax.swing.JCheckBox quoteCheck2;
+    private javax.swing.JButton saveButton;
     private javax.swing.JLabel secondsLabel;
     private javax.swing.JSpinner secondsSpinner;
     private javax.swing.JCheckBox semicolonCheck;
+    private javax.swing.JLabel settingsLabel;
     private javax.swing.JCheckBox spacesCheck;
     // End of variables declaration//GEN-END:variables
 }

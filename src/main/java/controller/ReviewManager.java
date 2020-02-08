@@ -164,6 +164,7 @@ public class ReviewManager {
      * Gathers texts due for review into the review queue.
      */
     public void collectToReview(){
+        reviewQueue = new ArrayList<>();
         Date curDate = new Date();
         for (Words w : library) {
             if(w.getNextDate() == null){

@@ -224,14 +224,40 @@ public class ReviewPanel extends javax.swing.JPanel {
         for(int i = 0; i < typed.length(); i++){
             char correct = curText.getText().charAt(i);
             if(typed.charAt(i) != correct){
-                //Forgive commas:
-                if(correct == ','){
+                //Forgive capitalization:
+                if(Options.getInstance().getIgnoreCase() &&
+                    Character.toUpperCase(correct) == 
+                        Character.toUpperCase(typed.charAt(i))){
                     try {
                         doc.insertString(i, 
                                 Character.toString(correct), bstyle); }
                     catch (BadLocationException e){}
-                    typed = textPane.getText();
                     continue;
+                }
+                //Forgive special characters:
+                ArrayList<Character> forgive = 
+                        Options.getInstance().getForgiveChars();
+                if(forgive.size() > 0){
+                    //Is the character found among forgivable characters?
+                    boolean found = false;
+                    for(Character c : forgive){
+                        if(c.charValue() == correct){
+                            try {
+                                doc.insertString(i, 
+                                        Character.toString(correct), bstyle); }
+                            catch (BadLocationException e){}
+                            //refresh the text object 
+                            //with the new character inserted
+                            typed = textPane.getText();
+                            found = true;
+                            break;
+                        }
+                    }
+                    if(found){
+                        //The character was forgivable, 
+                        //so the correction loop can continue
+                        continue;
+                    }
                 }
                 //Mistakes:
                 wrong++;

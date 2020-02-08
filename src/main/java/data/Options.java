@@ -5,6 +5,7 @@ package data;
 
 import java.util.ArrayList;
 import java.awt.Font;
+import java.util.Arrays;
 
 /**
  *
@@ -13,14 +14,14 @@ import java.awt.Font;
 public class Options {
     /**Initializes the class as a singleton*/
     private static final Options instance = new Options();
-    /**List of characters to ignore upon text correction*/
-    ArrayList<Character> forgiveChars;
     /**Whether to ignore letter case (default is yes)*/
     boolean ignoreCase;
-    /**Accuracy required to consider a text successfully reviewed/learned*/
-    int goalAccuracy;
+    /**List of characters to ignore upon text correction*/
+    ArrayList<Character> forgiveChars;
     /**Number of milliseconds to wait before correcting text*/
     int correctionDelay;
+    /**Accuracy required to consider a text successfully reviewed/learned*/
+    int goalAccuracy;
     /**Multiplier of the date increment when the text is successfully reviewed*/
     float incrementMulti;
     /**Default paragraph font*/
@@ -35,6 +36,15 @@ public class Options {
         paragraphFont = new java.awt.Font("Tahoma", 0, 16);
         buttonFont = new java.awt.Font("Tahoma", 1, 14);
         headerFont = new java.awt.Font("Tahoma", 1, 18);
+        //Ignore case by default
+        ignoreCase = true;
+        //Set default forgivable characters
+        forgiveChars = new ArrayList<>(Arrays.asList(';','.',',',' ', '"', ':',
+                '?','!'));
+        //Set default correction delay
+        correctionDelay = 1000;
+        //Set default accuracy goal
+        goalAccuracy = 90;
     }
     
     public static Options getInstance(){
@@ -55,7 +65,7 @@ public class Options {
         forgiveChars.add(newChar);
     }
 
-    public boolean isIgnoreCase() {
+    public boolean getIgnoreCase() {
         return ignoreCase;
     }
 

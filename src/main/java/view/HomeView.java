@@ -133,6 +133,11 @@ public class HomeView extends javax.swing.JFrame {
                 settingsButtonMouseExited(evt);
             }
         });
+        settingsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                settingsButtonActionPerformed(evt);
+            }
+        });
 
         homeButton.setBackground(new java.awt.Color(70, 140, 70));
         homeButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
@@ -249,7 +254,7 @@ public class HomeView extends javax.swing.JFrame {
     }//GEN-LAST:event_textsButtonMouseEntered
 
     private void settingsButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsButtonMouseEntered
-        if(!curPanel.equals(DUEPANEL)){
+        if(!curPanel.equals(SETTINGSPANEL)){
             settingsButton.setBackground(focusBtnColor);
         }
     }//GEN-LAST:event_settingsButtonMouseEntered
@@ -265,6 +270,11 @@ public class HomeView extends javax.swing.JFrame {
             textsButton.setBackground(origBtnColor);
         }
     }//GEN-LAST:event_textsButtonMouseExited
+
+    private void settingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsButtonActionPerformed
+        homePanel.add(new SettingsPanel(this), SETTINGSPANEL);
+        changePanel(SETTINGSPANEL);
+    }//GEN-LAST:event_settingsButtonActionPerformed
 
     /**
      * Import texts from a file
@@ -410,7 +420,7 @@ public class HomeView extends javax.swing.JFrame {
      * @param closePanel panel to close
      */
     public void reviewClose(JPanel closePanel){
-        manager.getReviewQueue();
+        manager.collectToReview();
         duePanel.refreshList();
         changePanel(DUEPANEL);
         homePanel.remove(closePanel);
@@ -429,10 +439,17 @@ public class HomeView extends javax.swing.JFrame {
         if(curPanel.equals(DUEPANEL)){
             homeButton.setBackground(focusBtnColor);
             textsButton.setBackground(origBtnColor);
+            settingsButton.setBackground(origBtnColor);
         }
         else if(curPanel.equals(BROWSEPANEL)){
-            textsButton.setBackground(focusBtnColor);
             homeButton.setBackground(origBtnColor);
+            textsButton.setBackground(focusBtnColor);
+            settingsButton.setBackground(origBtnColor);
+        }
+        else if(curPanel.equals(SETTINGSPANEL)){
+            homeButton.setBackground(origBtnColor);
+            textsButton.setBackground(origBtnColor);
+            settingsButton.setBackground(focusBtnColor);
         }
         CardLayout cl = (CardLayout)(homePanel.getLayout());
         cl.show(homePanel, panelName);
