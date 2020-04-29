@@ -14,7 +14,7 @@ import java.io.IOException;
  *
  * @author Rhadryn
  */
-public class XMLTranslator {
+public final class XMLTranslator {
     XStream xstream;
     String libraryLocation;
     String indicesLocation;

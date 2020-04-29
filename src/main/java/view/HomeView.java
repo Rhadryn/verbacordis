@@ -97,7 +97,7 @@ public class HomeView extends javax.swing.JFrame {
 
         textsButton.setBackground(new java.awt.Color(70, 140, 70));
         textsButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        textsButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rhadryn\\Documents\\NetBeansProjects\\verbacordis\\icons\\textssm.png")); // NOI18N
+        textsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/textssm.png"))); // NOI18N
         textsButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         textsButton.setFocusTraversalPolicyProvider(true);
         textsButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -116,13 +116,13 @@ public class HomeView extends javax.swing.JFrame {
 
         statsButton.setBackground(new java.awt.Color(70, 140, 70));
         statsButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        statsButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rhadryn\\Documents\\NetBeansProjects\\verbacordis\\icons\\statisticssm.png")); // NOI18N
+        statsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/statisticssm.png"))); // NOI18N
         statsButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         statsButton.setFocusTraversalPolicyProvider(true);
 
         settingsButton.setBackground(new java.awt.Color(70, 140, 70));
         settingsButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        settingsButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rhadryn\\Documents\\NetBeansProjects\\verbacordis\\icons\\settingssm.png")); // NOI18N
+        settingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/settingssm.png"))); // NOI18N
         settingsButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         settingsButton.setFocusTraversalPolicyProvider(true);
         settingsButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -142,7 +142,7 @@ public class HomeView extends javax.swing.JFrame {
         homeButton.setBackground(new java.awt.Color(70, 140, 70));
         homeButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         homeButton.setForeground(new java.awt.Color(204, 255, 204));
-        homeButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rhadryn\\Documents\\NetBeansProjects\\verbacordis\\icons\\homesm.png")); // NOI18N
+        homeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/homesm.png"))); // NOI18N
         homeButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         homeButton.setFocusTraversalPolicyProvider(true);
         homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -161,7 +161,7 @@ public class HomeView extends javax.swing.JFrame {
 
         progressButton.setBackground(new java.awt.Color(70, 140, 70));
         progressButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        progressButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rhadryn\\Documents\\NetBeansProjects\\verbacordis\\icons\\progresssm.png")); // NOI18N
+        progressButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/progresssm.png"))); // NOI18N
         progressButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         progressButton.setFocusTraversalPolicyProvider(true);
 
@@ -178,15 +178,16 @@ public class HomeView extends javax.swing.JFrame {
         sidePanelLayout.setVerticalGroup(
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sidePanelLayout.createSequentialGroup()
-                .addComponent(homeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(textsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(settingsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(settingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(statsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(statsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(progressButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(progressButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         homePanel.setBackground(new java.awt.Color(210, 255, 210));
@@ -205,7 +206,7 @@ public class HomeView extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(homePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(homePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
         );
 
         pack();
