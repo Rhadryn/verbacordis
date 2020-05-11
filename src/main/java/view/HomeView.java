@@ -20,6 +20,7 @@ import javax.swing.tree.TreePath;
  * @author Rhadryn
  */
 public class HomeView extends javax.swing.JFrame {
+    //Variables to keep track of
     private ReviewManager manager;
     private BrowsePanel browser;
     private DuePanel duePanel;
@@ -31,6 +32,7 @@ public class HomeView extends javax.swing.JFrame {
     final static String EDITPANEL = "Text Editor";
     final static String TEXTPANEL = "Text Viewer";
     final static String SETTINGSPANEL = "Settings";
+    //Constants for GUI color
     final static java.awt.Color focusBtnColor = new java.awt.Color(153, 255, 153);
     final static java.awt.Color origBtnColor = new java.awt.Color(70,140,70);
     final static java.awt.Color backColor = new java.awt.Color(210,255,210);

@@ -28,11 +28,6 @@ public class ReviewManager {
     /**Saved data location*/
     String dataLocation = "data/";
     
-    //TODO: MAKE THIS EDITABLE FROM OPTIONS WINDOW
-    public static final int GOALACCURACY = 90;
-    public static final int INCREMENTMULTI = 2;
-    public static final int CORRECTIONDELAY = 1000;
-    
     public ReviewManager(){
         library = new ArrayList<>();
         indices = new ArrayList<>();

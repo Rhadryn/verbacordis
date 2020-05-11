@@ -226,9 +226,9 @@ public class Words {
                 .atZone(ZoneId.systemDefault()).toInstant());
         
         //Increase review date increment if accuracy goal is met
-        if(accuracy >= controller.ReviewManager.GOALACCURACY){
-            dateIncrement = dateIncrement * 
-                    controller.ReviewManager.INCREMENTMULTI;
+        if(accuracy >= Options.getInstance().getGoalAccuracy()){
+            dateIncrement = (int) (dateIncrement * 
+                    Options.getInstance().getIncrementMulti());
         }
         //If accuracy isn't met, decrease increment by one day
         else{

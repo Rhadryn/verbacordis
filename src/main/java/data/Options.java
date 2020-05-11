@@ -24,6 +24,10 @@ public class Options {
     int goalAccuracy;
     /**Multiplier of the date increment when the text is successfully reviewed*/
     float incrementMulti;
+    /**Style of error correction*/
+    int correctionStyle;
+    
+    //AESTHETIC OPTIONS
     /**Default paragraph font*/
     Font paragraphFont;
     /**Default button font*/
@@ -104,6 +108,12 @@ public class Options {
     public Font getHeaderFont() {
         return headerFont;
     }
-    
-    
+
+    public int getCorrectionStyle() {
+        return correctionStyle;
+    }
+
+    public void setCorrectionStyle(int correctionStyle) {
+        this.correctionStyle = correctionStyle;
+    }
 }
