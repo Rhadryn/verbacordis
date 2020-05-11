@@ -78,13 +78,16 @@ public class ReviewPanel extends javax.swing.JPanel {
                     //Calculate progress:
                     int total = curText.getText().length();
                     int typed = textPane.getText().length();
-                    int progress = (int)Math.round((typed / (double)total) * 100);
+                    int progress = (int)Math.round((typed / 
+                            (double)total) * 100);
                     reviewProgress.setValue(progress);
-                    reviewProgress.setString(String.format("%d/%d", typed, total));
+                    reviewProgress.setString(
+                            String.format("%d/%d", typed, total));
                     reviewProgress.repaint();
                 }
            });        
-        typeTimer = new Timer(ReviewManager.CORRECTIONDELAY, checkText);
+        typeTimer = new Timer(Options.getInstance().getCorrectionDelay(), 
+                checkText);
     }
 
     /**
