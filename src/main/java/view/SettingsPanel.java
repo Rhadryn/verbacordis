@@ -5,6 +5,8 @@
  */
 package view;
 
+import data.Options;
+
 /**
  *
  * @author Rhadryn
@@ -18,6 +20,11 @@ public class SettingsPanel extends javax.swing.JPanel {
     public SettingsPanel(HomeView home) {
         initComponents();
         this.home = home;
+        
+        //Load settings from Options singleton
+        Options options = Options.getInstance();
+        secondsSpinner.setValue((float)(options.getCorrectionDelay() / 10));
+        accuracySpinner.setValue(options.getGoalAccuracy());
     }
 
     /**

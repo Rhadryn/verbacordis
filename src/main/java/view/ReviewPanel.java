@@ -5,7 +5,6 @@
  */
 package view;
 
-import controller.ReviewManager;
 import data.Words;
 import data.Options;
 import java.awt.Color;
@@ -33,6 +32,8 @@ public class ReviewPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ReviewPanel
+     * @param home The home view which allows for panel switching
+     * @param curWords The text to be reviewed
      */
     public ReviewPanel(HomeView home, ArrayList<Words> curWords) {
         initComponents();

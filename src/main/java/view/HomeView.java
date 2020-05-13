@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.tree.TreePath;
 
@@ -46,6 +47,7 @@ public class HomeView extends javax.swing.JFrame {
         initComponents();
         this.getContentPane().setBackground(backColor);
         
+        //Load the data
         if(manager.loadLibrary()){
             JOptionPane.showMessageDialog(this, "Library loaded.",
                     "Alert",JOptionPane.INFORMATION_MESSAGE);  
@@ -55,6 +57,13 @@ public class HomeView extends javax.swing.JFrame {
                     "Error",JOptionPane.ERROR_MESSAGE);  
         }
         
+        //Load icons
+        //TO DO
+        
+        //Display icons
+        //TO DO
+        
+        //Initialize panels
         browser = new BrowsePanel(this, manager.getIndices());
         duePanel = new DuePanel(this);
         homePanel.add(duePanel, DUEPANEL);
@@ -99,7 +108,6 @@ public class HomeView extends javax.swing.JFrame {
 
         textsButton.setBackground(new java.awt.Color(70, 140, 70));
         textsButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        textsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/textssm.png"))); // NOI18N
         textsButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         textsButton.setFocusTraversalPolicyProvider(true);
         textsButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -118,13 +126,11 @@ public class HomeView extends javax.swing.JFrame {
 
         statsButton.setBackground(new java.awt.Color(70, 140, 70));
         statsButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        statsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/statisticssm.png"))); // NOI18N
         statsButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         statsButton.setFocusTraversalPolicyProvider(true);
 
         settingsButton.setBackground(new java.awt.Color(70, 140, 70));
         settingsButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        settingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/settingssm.png"))); // NOI18N
         settingsButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         settingsButton.setFocusTraversalPolicyProvider(true);
         settingsButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -144,7 +150,6 @@ public class HomeView extends javax.swing.JFrame {
         homeButton.setBackground(new java.awt.Color(70, 140, 70));
         homeButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         homeButton.setForeground(new java.awt.Color(204, 255, 204));
-        homeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/homesm.png"))); // NOI18N
         homeButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         homeButton.setFocusTraversalPolicyProvider(true);
         homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -163,7 +168,6 @@ public class HomeView extends javax.swing.JFrame {
 
         progressButton.setBackground(new java.awt.Color(70, 140, 70));
         progressButton.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        progressButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icons/progresssm.png"))); // NOI18N
         progressButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         progressButton.setFocusTraversalPolicyProvider(true);
 

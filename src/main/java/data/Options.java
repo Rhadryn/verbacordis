@@ -46,7 +46,7 @@ public class Options {
         forgiveChars = new ArrayList<>(Arrays.asList(';','.',',',' ', '"', ':',
                 '?','!'));
         //Set default correction delay
-        correctionDelay = 1000;
+        correctionDelay = 0;
         //Set default accuracy goal
         goalAccuracy = 90;
     }
