@@ -92,11 +92,11 @@
     <text>Blessed is the man that walketh not in the counsel of the ungodly, nor standeth in the way of sinners, nor sitteth in the seat of the scornful.</text>
     <version>KJV</version>
     <bestAccuracy>100</bestAccuracy>
-    <repetitions>3</repetitions>
+    <repetitions>4</repetitions>
     <startDate>2020-01-29 12:17:54.204 UTC</startDate>
     <dateIncrement>0</dateIncrement>
-    <lastDate>2020-05-13 21:35:16.429 UTC</lastDate>
-    <nextDate>2020-05-21 21:35:16.429 UTC</nextDate>
+    <lastDate>2020-05-13 22:46:27.304 UTC</lastDate>
+    <nextDate>2020-05-13 22:46:27.304 UTC</nextDate>
   </data.Words>
   <data.Words>
     <indices>
@@ -107,7 +107,10 @@
     <text>But his delight is in the law of the Lord; and in his law doth he meditate day and night.</text>
     <version>KJV</version>
     <bestAccuracy>100</bestAccuracy>
-    <repetitions>5</repetitions>
-    <dateIncrement>1</dateIncrement>
+    <repetitions>6</repetitions>
+    <startDate>2020-05-13 22:47:56.172 UTC</startDate>
+    <dateIncrement>0</dateIncrement>
+    <lastDate>2020-05-13 22:47:56.172 UTC</lastDate>
+    <nextDate>2020-05-14 22:47:56.172 UTC</nextDate>
   </data.Words>
 </list>

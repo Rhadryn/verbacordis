@@ -233,8 +233,12 @@ public class ReviewPanel extends javax.swing.JPanel {
                     Character.toUpperCase(correct) == 
                         Character.toUpperCase(typed.charAt(i))){
                     try {
+                        //Insert correct character
                         doc.insertString(i, 
-                                Character.toString(correct), bstyle); }
+                                Character.toString(correct), bstyle);
+                        //Remove incorrect character
+                        doc.remove(i + 1, 1);
+                    }
                     catch (BadLocationException e){}
                     continue;
                 }
